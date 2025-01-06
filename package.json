@@ -1,0 +1,43 @@
+{
+  "name": "telegraf-session-store-ydb",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "prettier . --write",
+    "build": "tsup"
+  },
+  "keywords": [
+    "telegraf",
+    "telegram",
+    "ydb"
+  ],
+  "author": "Timur Guliamov",
+  "license": "MIT",
+  "description": "Session store for Telegraf using Yandex Database (YDB).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tplaymeow/telegraf-session-ydb.git"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "ydb-sdk": "^5.8.0"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts"
+}

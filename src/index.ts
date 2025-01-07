@@ -87,7 +87,7 @@ export interface ParsingOptions<Session> {
    * @returns The parsed session data.
    * @default JSON.parse
    */
-  parse: (sessionString: string) => Session;
+  parse?: (sessionString: string) => Session;
 
   /**
    * Stringifies session data into a string format.
@@ -96,7 +96,7 @@ export interface ParsingOptions<Session> {
    * @returns The session data represented as a string.
    * @default JSON.stringify
    */
-  stringify: (session: Session) => string;
+  stringify?: (session: Session) => string;
 }
 
 const defaultDriverOptions = {

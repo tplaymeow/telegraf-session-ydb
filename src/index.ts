@@ -191,8 +191,12 @@ export function Ydb<Session>(options: YdbOpts<Session>): SessionStore<Session> {
           new TableDescription()
             .withColumn(new Column(tableOptions.keyColumnName, keyColumnType))
             .withColumn(
-              new Column(tableOptions.sessionColumnName, sessionColumnType),
-            ),
+              new Column(
+                tableOptions.sessionColumnName,
+                Types.optional(sessionColumnType),
+              ),
+            )
+            .withPrimaryKey(tableOptions.keyColumnName),
         );
       })
     : Promise.resolve();

@@ -1,6 +1,6 @@
 {
   "name": "telegraf-session-store-ydb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "format": "prettier . --write",
     "build": "tsup",
